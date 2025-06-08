@@ -20,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kafka-connect", "kafka-conn
 		kafka-connect\Dockerfile.kafka-connect = kafka-connect\Dockerfile.kafka-connect
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F5887CF4-0B21-4AEF-AE98-DB04C0A937D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleLogs.SerilogElastic", "src\SampleLogs.SerilogElastic\SampleLogs.SerilogElastic.csproj", "{565E28CA-CF93-4FC1-B426-67449FA951B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +32,12 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2C4EA3B3-200B-47BF-8563-BD0048947B82} = {E26E86F1-0594-4459-A1DA-8A8507BED29D}
 		{41CAC361-A637-47B6-A7E2-1E53DB69FE99} = {E26E86F1-0594-4459-A1DA-8A8507BED29D}
+		{565E28CA-CF93-4FC1-B426-67449FA951B5} = {F5887CF4-0B21-4AEF-AE98-DB04C0A937D8}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{565E28CA-CF93-4FC1-B426-67449FA951B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565E28CA-CF93-4FC1-B426-67449FA951B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565E28CA-CF93-4FC1-B426-67449FA951B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565E28CA-CF93-4FC1-B426-67449FA951B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
