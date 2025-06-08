@@ -1,0 +1,11 @@
+services:
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.13.4
+    depends_on:
+      - kafka
+      - elasticsearch
+    volumes:
+      - ./logstash/pipeline.conf:/usr/share/logstash/pipeline/logstash.conf
+    ports:
+      - "5044:5044"  # Opcional, caso queira expor Logstash para beats
