@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleLogs.SerilogElastic",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleLogs.SerilogKafka", "src\SampleLogs.SerilogKafka\SampleLogs.SerilogKafka.csproj", "{9C43A915-FBEA-403F-B755-FDD9826C18F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleLogs.NLogKafka", "src\SampleLogs.NLogKafka\SampleLogs.NLogKafka.csproj", "{E4719348-6147-4C88-B877-D72FC527AAD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,7 @@ Global
 		{41CAC361-A637-47B6-A7E2-1E53DB69FE99} = {E26E86F1-0594-4459-A1DA-8A8507BED29D}
 		{565E28CA-CF93-4FC1-B426-67449FA951B5} = {F5887CF4-0B21-4AEF-AE98-DB04C0A937D8}
 		{9C43A915-FBEA-403F-B755-FDD9826C18F6} = {F5887CF4-0B21-4AEF-AE98-DB04C0A937D8}
+		{E4719348-6147-4C88-B877-D72FC527AAD1} = {F5887CF4-0B21-4AEF-AE98-DB04C0A937D8}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{565E28CA-CF93-4FC1-B426-67449FA951B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -46,5 +49,9 @@ Global
 		{9C43A915-FBEA-403F-B755-FDD9826C18F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C43A915-FBEA-403F-B755-FDD9826C18F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C43A915-FBEA-403F-B755-FDD9826C18F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4719348-6147-4C88-B877-D72FC527AAD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4719348-6147-4C88-B877-D72FC527AAD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4719348-6147-4C88-B877-D72FC527AAD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4719348-6147-4C88-B877-D72FC527AAD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
