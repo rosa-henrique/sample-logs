@@ -8,3 +8,11 @@ datasources:
     access: proxy
     url: http://prometheus:9090/
     isDefault: true
+  - name: loki-logs
+    editable: true
+    type: loki
+    access: proxy
+    url: http://loki:3100
+    jsonData:
+      timeout: 60
+      maxLines: 1000

@@ -1,6 +1,16 @@
 using Prometheus;
+using SampleLogs.PrometheusGrafana;
+using Serilog;
+using Serilog.Sinks.Grafana.Loki;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog((context, loggerConfig) =>
+    loggerConfig.ReadFrom.Configuration(context.Configuration).WriteTo.GrafanaLoki("http://loki:3100", labels: [ new () 
+    {
+        Key = "app",
+        Value = builder.Environment.ApplicationName
+    }]));
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -52,6 +62,10 @@ app.MapGet("/weatherforecast", () =>
     })
     .WithName("GetWeatherForecast")
     .WithOpenApi();
+
+app.UseSerilogRequestLogging();
+
+app.UseMiddleware<RequestContextLoggingMiddleware>();
 
 app.Run();
 

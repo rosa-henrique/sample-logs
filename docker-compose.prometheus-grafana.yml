@@ -10,6 +10,7 @@ services:
       - 8080:8080
     networks:
       - web_api_metrics_network
+
   prometheus:
     build:
       context: ./prometheus-grafana/prometheus
@@ -23,7 +24,8 @@ services:
     networks:
       - web_api_metrics_network
     volumes:
-      - './prometheus-grafana/prometheus/data:/data'
+      - "./prometheus-grafana/prometheus/data:/data"
+
   grafana:
     build:
       context: ./prometheus-grafana/grafana
@@ -36,6 +38,18 @@ services:
       - 3000:3000
     networks:
       - web_api_metrics_network
+
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./prometheus-grafana/loki/loki-config.yml:/etc/loki/local-config.yaml
+      - ./data/loki:/loki
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - web_api_metrics_network
+
 networks:
   web_api_metrics_network:
     #driver: overlay
